@@ -7,14 +7,13 @@ package com.company.sorting;
  * @since 02.12.2021
  * @param <T> object of any class
  */
-public interface Sort<T> {
+public interface Sort<T extends Comparable<T>> {
     /**
      * @author mrcombajn
-     * @version 0.0.1
      * @since 02.12.2021
-     * @param arrayToSort
-     * @return sorted array
-     * @throws Exception
+     * @param arrayToSort Array send to the method.
+     * @return Sorted array.
+     * @throws Exception Throws when exception occurs.
      */
-    T[] sort(T[] arrayToSort) throws Exception;
+    void sort(T[] arrayToSort) throws Exception;
 }
