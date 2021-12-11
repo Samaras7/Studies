@@ -14,6 +14,9 @@ public class ModifiedStudent extends Student {
         grades = new ArrayList<>();
     }
 
+    public void addGrade(int grade) {
+        grades.add(grade);
+    }
 
     @Override
     public double average() {
