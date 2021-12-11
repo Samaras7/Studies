@@ -10,9 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BubbleSortTest {
 
-    static BubbleSort bubbleSort;
+    private static BubbleSort bubbleSort;
 
-    Integer [] array;
+    private Integer [] array;
 
     @BeforeAll
     static void initializeBubbleSort() {
@@ -21,14 +21,14 @@ class BubbleSortTest {
 
     @BeforeEach
     void initializeArray() {
-        array = new Integer[]{1,6,3,4,67,6,1};
+        array = new Integer[]{1, 6, 3, 4, 67, 6, 1};
     }
 
     @Test
     void bubbleSortTest() {
         try {
             bubbleSort.sort(array);
-            Arrays.stream(array).forEach(System.out::println);
+            assertEquals(true, Arrays.equals(array, new Integer[] {1, 1, 3, 4, 6, 6, 67}));
         } catch (Exception e) {
             e.printStackTrace();
         }
